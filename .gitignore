@@ -1,0 +1,90 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+*.tmp
+*.temp
+*.cache
+*.pidb
+*.svclog
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# Visual Studio
+.vs/
+.vscode/
+*.VC.db
+*.VC.VC.opendb
+*.opensdf
+*.sdf
+*.dbmdl
+*.jfm
+ipch/
+*.tlog
+*.lastbuildstate
+
+# Rider / ReSharper
+.idea/
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]enchmarkDotNet.Artifacts/
+
+# NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+!**/[Pp]ackages/repositories.config
+.nuget/
+# Keep lock file only if your team uses locked restore
+# packages.lock.json
+
+# Publish output
+publish/
+*.publishproj
+
+# IIS / local config
+*.aps
+*.pfx
+*.publishsettings
+*.pubxml.user
+appsettings.Development.json
+
+# Entity Framework / scaffolding temp files
+*.mdf
+*.ldf
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Node (if frontend exists)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist/
+coverage/
+
+# JetBrains / VS Code workspace
+*.code-workspace
+
+# Optional: generated files
+Generated/
