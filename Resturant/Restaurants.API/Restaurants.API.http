@@ -4,7 +4,26 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-@id=1
+@id=10
 GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 
 ###
+
+POST {{Restaurants.API_HostAddress}}/api/restaurants
+Content-Type: application/json
+
+{
+  "name": "New Restaurant",
+  "description": "A new restaurant",
+  "category": "Fast Food",
+  "hasDelivery": true,
+  "contactEmail": "contact@newrestaurant.com",
+  "contactNumber": "123-456-7890",
+  "street": "123 Main St",
+  "city": "Anytown",
+  "state": "CA",
+  "postalCode": "12345"
+}
+
+###
+GET {{Restaurants.API_HostAddress}}/api/Restaurants/3
