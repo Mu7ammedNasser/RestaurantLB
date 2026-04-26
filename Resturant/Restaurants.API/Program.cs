@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Restaurants.Application.Extensions;
 using Restaurants.Infrastructure.Extensions;
 using Restaurants.Infrastructure.Persistence;
 using Restaurants.Infrastructure.Seeders;
@@ -18,24 +19,19 @@ namespace Restaurant.API
 
 
             builder.Services.AddInfrastructure(builder.Configuration);
+            builder.Services.AddApplicationServices();
             #endregion
 
             var app = builder.Build();
 
-            try
-            {
                 var scope = app.Services.CreateScope();
                 var dbContext = scope.ServiceProvider.GetRequiredService<RestaurantsDbContext>();
                 await dbContext.Database.MigrateAsync();
                 var seeder = scope.ServiceProvider.GetRequiredService<IRestaurantSeeder>();
 
                 await seeder.Seed();
-            }
-            catch (Exception ex)
-            {
-                var logger = app.Services.GetRequiredService<ILogger<Program>>();
-                logger.LogError(ex, "An error occurred while migrating or seeding the database.");
-            }
+            
+            
 
             #region Configure the HTTP request pipeline.
 

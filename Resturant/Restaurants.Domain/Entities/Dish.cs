@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Resturants.Domain.Entities
+namespace Restaurants.Domain.Entities
 {
     public class Dish
     {

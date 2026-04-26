@@ -11,7 +11,7 @@ using Restaurants.Infrastructure.Persistence;
 namespace Restaurants.Infrastructure.Migrations
 {
     [DbContext(typeof(RestaurantsDbContext))]
-    [Migration("20260425075728_initialCreate")]
+    [Migration("20260426075128_initialCreate")]
     partial class initialCreate
     {
         /// <inheritdoc />
@@ -24,7 +24,7 @@ namespace Restaurants.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Resturants.Domain.Entities.Dish", b =>
+            modelBuilder.Entity("Restaurants.Domain.Entities.Dish", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -56,7 +56,7 @@ namespace Restaurants.Infrastructure.Migrations
                     b.ToTable("Dishes");
                 });
 
-            modelBuilder.Entity("Resturants.Domain.Entities.Restaurant", b =>
+            modelBuilder.Entity("Restaurants.Domain.Entities.Restaurant", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -93,9 +93,9 @@ namespace Restaurants.Infrastructure.Migrations
                     b.ToTable("Restaurants");
                 });
 
-            modelBuilder.Entity("Resturants.Domain.Entities.Dish", b =>
+            modelBuilder.Entity("Restaurants.Domain.Entities.Dish", b =>
                 {
-                    b.HasOne("Resturants.Domain.Entities.Restaurant", "Restaurant")
+                    b.HasOne("Restaurants.Domain.Entities.Restaurant", "Restaurant")
                         .WithMany("Dishes")
                         .HasForeignKey("RestaurantId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -104,9 +104,9 @@ namespace Restaurants.Infrastructure.Migrations
                     b.Navigation("Restaurant");
                 });
 
-            modelBuilder.Entity("Resturants.Domain.Entities.Restaurant", b =>
+            modelBuilder.Entity("Restaurants.Domain.Entities.Restaurant", b =>
                 {
-                    b.OwnsOne("Resturants.Domain.Entities.Address", "Address", b1 =>
+                    b.OwnsOne("Restaurants.Domain.Entities.Address", "Address", b1 =>
                         {
                             b1.Property<int>("RestaurantId")
                                 .HasColumnType("int");
@@ -134,7 +134,7 @@ namespace Restaurants.Infrastructure.Migrations
                     b.Navigation("Address");
                 });
 
-            modelBuilder.Entity("Resturants.Domain.Entities.Restaurant", b =>
+            modelBuilder.Entity("Restaurants.Domain.Entities.Restaurant", b =>
                 {
                     b.Navigation("Dishes");
                 });

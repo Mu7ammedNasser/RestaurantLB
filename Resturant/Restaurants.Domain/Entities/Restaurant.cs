@@ -1,4 +1,4 @@
-﻿namespace Resturants.Domain.Entities
+﻿namespace Restaurants.Domain.Entities
 {
     public class Restaurant
     {
@@ -13,6 +13,6 @@
         public string? ContactNumber { get; set; }
 
         public Address? Address { get; set; }
-        public List<Dish>? Dishes { get; set; }
+        public List<Dish>? Dishes { get; set; } = new();
     }
 }

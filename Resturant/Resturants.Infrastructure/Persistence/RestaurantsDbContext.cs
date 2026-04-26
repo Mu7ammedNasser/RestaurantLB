@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Resturants.Domain.Entities;
+using Restaurants.Domain.Entities;
 
 namespace Restaurants.Infrastructure.Persistence
 {

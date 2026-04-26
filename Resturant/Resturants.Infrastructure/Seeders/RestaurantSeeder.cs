@@ -1,4 +1,4 @@
-﻿using Resturants.Domain.Entities;
+﻿using Restaurants.Domain.Entities;
 using Restaurants.Infrastructure.Persistence;
 namespace Restaurants.Infrastructure.Seeders
 {
