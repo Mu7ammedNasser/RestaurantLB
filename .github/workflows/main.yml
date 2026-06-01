@@ -1,23 +1,22 @@
-name: net workflow | shell sript
+name: net workflow
 
 on:
   push:
-   branches: main
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
-    first_job:
-      runs-on: ubuntu-latest
-      steps:
-        - name: checkout repo
-          uses: actions/checkout@v4
-
-        - name: list files
-          run: ls -ltra
-          
-        - name: run shell script
-          run: echo "first wf" 
-
-        - name: Run script
-          run: ./script.sh
-
-          
+  firstjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
+      - name: list files
+        run: ls -la
+      - name: run tests
+        run: echo "Running tests..."
+      - name: run cow
+        run: |
+          chmod +x script.sh
+          ./script.sh
