@@ -17,4 +17,7 @@ jobs:
         - name: run shell script
           run: echo "first wf" 
 
+        - name: Run script
+          run: ./script.sh
+
           
