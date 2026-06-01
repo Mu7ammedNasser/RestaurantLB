@@ -18,6 +18,6 @@ jobs:
           run: echo "first wf" 
 
         - name: Run script
-         run: ./script.sh
+          run: ./script.sh
 
           
